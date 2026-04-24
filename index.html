@@ -36,6 +36,7 @@
   @media (min-width: 560px) { .videos { grid-template-columns: 1fr 1fr; } }
   figure { margin: 0.75rem 0 0; }
   figure video, figure img { width: 100%; height: auto; border-radius: 4px; background: #000; display: block; }
+  figure.thumb { max-width: 320px; }
   figcaption { font-size: 0.85rem; color: #666; margin-top: 0.35rem; }
   @media (prefers-color-scheme: dark) { figcaption { color: #aaa; } }
   .embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin-top: 0.75rem; }
@@ -108,7 +109,7 @@
       need for chemical herbicides. Covers mechanical design, perception,
       navigation, and full system integration.
     </p>
-    <figure>
+    <figure class="thumb">
       <img src="assets/rowesys.avif"
            alt="The Rowesys autonomous weeding robot operating between crop rows">
       <figcaption>Rowesys in the field. Photo by Steffen Immanuel Denker.</figcaption>
@@ -122,12 +123,6 @@
       from RGB-D images, as part of an autonomous waste-handling pipeline.
       Supervised by Fidel Esquivel Estay and Hendrik Kolvenbach.
     </p>
-    <figure>
-      <img src="assets/waste_weight_estimation.png"
-           alt="3D depth reconstruction of assorted waste items used as input to the weight-estimation model">
-      <figcaption>Depth-based reconstruction of waste items used as input to
-        the weight-estimation model.</figcaption>
-    </figure>
   </li>
 </ul>
 
