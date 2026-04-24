@@ -29,7 +29,7 @@
   li { margin: 0.5rem 0; }
   a { color: #0066cc; text-decoration: none; }
   a:hover { text-decoration: underline; }
-  .contact { font-size: 0.95rem; }
+  .contact { font-size: 0.95rem; margin: 0.25rem 0; }
   .meta { color: #666; font-size: 0.92rem; }
   @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
   .extras { font-size: 0.92rem; margin-top: 0.25rem; }
@@ -47,28 +47,29 @@
   — how learned systems develop general competence in the real world.
 </p>
 
-<h2>Links</h2>
-<ul class="contact">
-  <li><a href="mailto:nicoburger1998@gmail.ch">nicoburger1998@gmail.ch</a></li>
-  <li><a href="https://github.com/burgern">github.com/burgern</a></li>
-</ul>
+<p class="contact"><a href="mailto:nicoburger1998@gmail.ch">nicoburger1998@gmail.ch</a></p>
+<p class="contact"><a href="https://github.com/burgern">github.com/burgern</a></p>
 
 <h2>Selected work</h2>
 <ul>
   <li>
-    <a href="https://arxiv.org/abs/2602.00401">ZEST: Zero-shot Embodied Skill Transfer</a>
+    <a href="https://arxiv.org/abs/2602.00401">ZEST: Zero-shot Embodied Skill Transfer for Athletic Robot Control</a>
     <div class="meta">Co-author · 2026</div>
     <p>
-      A framework for transferring manipulation skills to new robot embodiments
-      and tasks without per-target fine-tuning. Policies trained in simulation
-      generalize zero-shot to unseen hardware and object configurations.
+      A motion-imitation framework for athletic whole-body humanoid control.
+      Policies are trained in simulation from heterogeneous sources — motion
+      capture, monocular video, and hand-crafted animation — and deployed
+      zero-shot to hardware, without contact labels, state estimators, or
+      per-skill reward shaping. Demonstrated across Boston Dynamics Atlas,
+      Unitree G1, and Spot on skills from breakdancing to box-climbing to
+      continuous backflips.
     </p>
     <div class="extras">
       <a href="https://www.youtube.com/watch?v=CXyIXiT4zhA">Video</a>
     </div>
   </li>
   <li>
-    <a href="assets/msc_thesis.pdf">MSc thesis — Target Object Search using Interactive Perception</a>
+    <a href="assets/msc_thesis.pdf">MSc Thesis — Target Object Search using Interactive Perception</a>
     <div class="meta">ETH Zurich, Robotic Systems Lab · 2023</div>
     <p>
       TOSIP retrieves a language-specified object from a cluttered tabletop
@@ -85,8 +86,8 @@
     </div>
   </li>
   <li>
-    <a href="assets/rowesys_report.pdf">Rowesys — Rosie, an autonomous weeding robot</a>
-    <div class="meta">ETH Zurich, Focus Project (team of 11) · 2020</div>
+    <a href="assets/rowesys_report.pdf">Focus Project — Rowesys: Goodbye to Herbicides</a>
+    <div class="meta">ETH Zurich, Focus Project (team of 10) · 2020</div>
     <p>
       Nine-month Bachelor capstone: the Rowesys team designed and built
       <em>Rosie</em>, a four-wheel-drive field robot for organic sugar-beet
@@ -98,7 +99,7 @@
     </div>
   </li>
   <li>
-    <a href="assets/waste_weight_estimation_report.pdf">Image-Based Weight Estimation for Waste Items</a>
+    <a href="assets/waste_weight_estimation_report.pdf">Semester Thesis — Image-Based Weight Estimation for Waste Items</a>
     <div class="meta">ETH Zurich, Robotic Systems Lab · 2022</div>
     <p>
       Semester thesis comparing class-average, regression, and neural-network
