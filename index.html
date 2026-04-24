@@ -34,10 +34,12 @@
   @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
   .videos { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 0.75rem 0 0; }
   @media (min-width: 560px) { .videos { grid-template-columns: 1fr 1fr; } }
-  figure { margin: 0; }
-  figure video { width: 100%; height: auto; border-radius: 4px; background: #000; display: block; }
+  figure { margin: 0.75rem 0 0; }
+  figure video, figure img { width: 100%; height: auto; border-radius: 4px; background: #000; display: block; }
   figcaption { font-size: 0.85rem; color: #666; margin-top: 0.35rem; }
   @media (prefers-color-scheme: dark) { figcaption { color: #aaa; } }
+  .embed { position: relative; width: 100%; aspect-ratio: 16 / 9; margin-top: 0.75rem; }
+  .embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 4px; }
 </style>
 </head>
 <body>
@@ -60,6 +62,21 @@
 <h2>Writing</h2>
 <ul>
   <li>
+    <a href="https://arxiv.org/abs/2602.00401">ZEST: Zero-shot Embodied Skill Transfer</a>
+    <div class="meta">Co-author · 2026</div>
+    <p>
+      A framework for transferring manipulation skills to new robot embodiments
+      and tasks without per-target fine-tuning. Policies trained in simulation
+      generalize zero-shot to unseen hardware and object configurations.
+    </p>
+    <div class="embed">
+      <iframe src="https://www.youtube-nocookie.com/embed/CXyIXiT4zhA?rel=0"
+              title="ZEST: Zero-shot Embodied Skill Transfer"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </div>
+  </li>
+  <li>
     <a href="assets/msc_thesis.pdf">MSc thesis — RL-based target object search with a 4-DoF gripper</a>
     <div class="meta">ETH Zurich, Robotic Systems Lab · 2023</div>
     <p>
@@ -71,50 +88,46 @@
     </p>
     <div class="videos">
       <figure>
-        <video src="assets/tosip.mp4" controls muted playsinline preload="metadata"></video>
+        <video src="assets/tosip_open_vocab.mp4" controls muted playsinline preload="metadata"></video>
         <figcaption>Open-vocabulary target search — the policy locates arbitrary
           text-specified objects in unseen scenes.</figcaption>
       </figure>
       <figure>
-        <video src="assets/tosip_no_ov.mp4" controls muted playsinline preload="metadata"></video>
+        <video src="assets/tosip_interaction.mp4" controls muted playsinline preload="metadata"></video>
         <figcaption>Object interaction — reaching, grasping, and manipulating the
           identified target with the 4-DoF gripper.</figcaption>
       </figure>
     </div>
   </li>
   <li>
-    <a href="assets/3dvision_report.pdf">Improving Relative Pose Estimation by Estimating Gravity</a>
-    <div class="meta">ETH Zurich, 3D Vision course project · 2023</div>
-    <p>
-      Evaluating a 3-point (gravity-aware) relative pose estimator against the
-      classical 5-point solver inside RANSAC. Using the gravity vector — measured
-      from an IMU or predicted by UprightNet — reduces the minimal sample size and
-      cuts RANSAC iterations exponentially. Benchmarked on 11k+ image pairs from
-      260 ScanNet indoor scenes under varying gravity noise.
-    </p>
-  </li>
-  <li>
-    <a href="assets/semester_project.pdf">Image-Based Weight Estimation for Waste Items</a>
-    <div class="meta">ETH Zurich, Robotic Systems Lab · 2022</div>
-    <p>
-      Semester thesis on predicting the mass of individual waste items directly
-      from RGB(-D) images, as part of an autonomous waste-handling pipeline.
-      Supervised by Fidel Esquivel Estay and Hendrik Kolvenbach.
-    </p>
-  </li>
-  <li>
-    <a href="assets/focus_project_report.pdf">Goodbye to Herbicides — An Autonomous Weeding Robot</a>
+    <a href="assets/rowesys_report.pdf">Rowesys — An Autonomous Weeding Robot</a>
     <div class="meta">ETH Zurich, Focus Project (team of 11) · 2020</div>
     <p>
       Year-long Bachelor capstone: designing and building a field robot that
-      detects and mechanically removes weeds, eliminating the need for chemical
-      herbicides. Covers mechanical design, perception, navigation, and system
-      integration.
+      detects and mechanically removes weeds between crop rows, eliminating the
+      need for chemical herbicides. Covers mechanical design, perception,
+      navigation, and full system integration.
     </p>
+    <figure>
+      <img src="assets/rowesys.avif"
+           alt="The Rowesys autonomous weeding robot operating between crop rows">
+      <figcaption>Rowesys in the field. Photo by Steffen Immanuel Denker.</figcaption>
+    </figure>
   </li>
   <li>
-    <a href="https://arxiv.org/abs/2602.00401">ZEST: Zero-shot Embodied Skill Transfer</a>
-    (co-author) · 2026.
+    <a href="assets/waste_weight_estimation_report.pdf">Image-Based Weight Estimation for Waste Items</a>
+    <div class="meta">ETH Zurich, Robotic Systems Lab · 2022</div>
+    <p>
+      Semester thesis on predicting the mass of individual waste items directly
+      from RGB-D images, as part of an autonomous waste-handling pipeline.
+      Supervised by Fidel Esquivel Estay and Hendrik Kolvenbach.
+    </p>
+    <figure>
+      <img src="assets/waste_weight_estimation.png"
+           alt="3D depth reconstruction of assorted waste items used as input to the weight-estimation model">
+      <figcaption>Depth-based reconstruction of waste items used as input to
+        the weight-estimation model.</figcaption>
+    </figure>
   </li>
 </ul>
 
