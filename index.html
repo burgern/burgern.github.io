@@ -26,10 +26,18 @@
   @media (prefers-color-scheme: dark) { .sub { color: #aaa; } }
   h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 2rem 0 0.5rem; }
   ul { padding-left: 1.1rem; margin: 0.25rem 0; }
-  li { margin: 0.25rem 0; }
+  li { margin: 0.5rem 0; }
   a { color: #0066cc; text-decoration: none; }
   a:hover { text-decoration: underline; }
   .contact { font-size: 0.95rem; }
+  .meta { color: #666; font-size: 0.92rem; }
+  @media (prefers-color-scheme: dark) { .meta { color: #aaa; } }
+  .videos { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 0.75rem 0 0; }
+  @media (min-width: 560px) { .videos { grid-template-columns: 1fr 1fr; } }
+  figure { margin: 0; }
+  figure video { width: 100%; height: auto; border-radius: 4px; background: #000; display: block; }
+  figcaption { font-size: 0.85rem; color: #666; margin-top: 0.35rem; }
+  @media (prefers-color-scheme: dark) { figcaption { color: #aaa; } }
 </style>
 </head>
 <body>
@@ -52,13 +60,61 @@
 <h2>Writing</h2>
 <ul>
   <li>
-    <a href="assets/burger_nicola_msc_thesis.pdf">MSc thesis</a> —
-    <em>RL-based target object search with a 4-DoF gripper</em>,
-    ETH Zurich RSL, 2023.
+    <a href="assets/msc_thesis.pdf">MSc thesis — RL-based target object search with a 4-DoF gripper</a>
+    <div class="meta">ETH Zurich, Robotic Systems Lab · 2023</div>
+    <p>
+      Training a task-oriented search-and-interaction policy (TOSIP) end-to-end with
+      reinforcement learning on a mobile manipulator. The agent explores cluttered
+      indoor scenes, identifies a target specified by natural language, and performs
+      a goal-directed interaction. Open-vocabulary target grounding lets the same
+      policy generalize to objects never seen during training.
+    </p>
+    <div class="videos">
+      <figure>
+        <video src="assets/tosip.mp4" controls muted playsinline preload="metadata"></video>
+        <figcaption>Open-vocabulary target search — the policy locates arbitrary
+          text-specified objects in unseen scenes.</figcaption>
+      </figure>
+      <figure>
+        <video src="assets/tosip_no_ov.mp4" controls muted playsinline preload="metadata"></video>
+        <figcaption>Object interaction — reaching, grasping, and manipulating the
+          identified target with the 4-DoF gripper.</figcaption>
+      </figure>
+    </div>
+  </li>
+  <li>
+    <a href="assets/3dvision_report.pdf">Improving Relative Pose Estimation by Estimating Gravity</a>
+    <div class="meta">ETH Zurich, 3D Vision course project · 2023</div>
+    <p>
+      Evaluating a 3-point (gravity-aware) relative pose estimator against the
+      classical 5-point solver inside RANSAC. Using the gravity vector — measured
+      from an IMU or predicted by UprightNet — reduces the minimal sample size and
+      cuts RANSAC iterations exponentially. Benchmarked on 11k+ image pairs from
+      260 ScanNet indoor scenes under varying gravity noise.
+    </p>
+  </li>
+  <li>
+    <a href="assets/semester_project.pdf">Image-Based Weight Estimation for Waste Items</a>
+    <div class="meta">ETH Zurich, Robotic Systems Lab · 2022</div>
+    <p>
+      Semester thesis on predicting the mass of individual waste items directly
+      from RGB(-D) images, as part of an autonomous waste-handling pipeline.
+      Supervised by Fidel Esquivel Estay and Hendrik Kolvenbach.
+    </p>
+  </li>
+  <li>
+    <a href="assets/focus_project_report.pdf">Goodbye to Herbicides — An Autonomous Weeding Robot</a>
+    <div class="meta">ETH Zurich, Focus Project (team of 11) · 2020</div>
+    <p>
+      Year-long Bachelor capstone: designing and building a field robot that
+      detects and mechanically removes weeds, eliminating the need for chemical
+      herbicides. Covers mechanical design, perception, navigation, and system
+      integration.
+    </p>
   </li>
   <li>
     <a href="https://arxiv.org/abs/2602.00401">ZEST: Zero-shot Embodied Skill Transfer</a>
-    (co-author), 2026.
+    (co-author) · 2026.
   </li>
 </ul>
 
