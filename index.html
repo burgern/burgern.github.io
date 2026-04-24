@@ -68,14 +68,18 @@
     </div>
   </li>
   <li>
-    <a href="assets/msc_thesis.pdf">MSc thesis — RL-based target object search with a 4-DoF gripper</a>
+    <a href="assets/msc_thesis.pdf">MSc thesis — Target Object Search using Interactive Perception</a>
     <div class="meta">ETH Zurich, Robotic Systems Lab · 2023</div>
     <p>
-      Training a task-oriented search-and-interaction policy (TOSIP) end-to-end with
-      reinforcement learning on a mobile manipulator. The agent explores cluttered
-      indoor scenes, identifies a target specified by natural language, and performs
-      a goal-directed interaction. Open-vocabulary target grounding lets the same
-      policy generalize to objects never seen during training.
+      TOSIP (Target Object Search using Interactive Perception) retrieves a
+      language-specified object from a cluttered tabletop using a fixed 4-DoF
+      arm and overhead camera. A Double Q-Learning policy learns pushing and
+      grasping synergies, and an Open Vocabulary Fusion layer combines CLIPSeg
+      features with geometric features so the same policy generalizes to
+      objects described by free-form text. Outperforms the VPG baseline (95.1%
+      grasp success, +3% action efficiency) and ships with a 17× faster
+      NVIDIA Omniverse reimplementation of the environment. Supervised by
+      Mayank Mittal and Vaishakh Patil.
     </p>
     <div class="extras">
       Videos:
@@ -84,22 +88,28 @@
     </div>
   </li>
   <li>
-    <a href="assets/rowesys_report.pdf">Rowesys — An Autonomous Weeding Robot</a>
+    <a href="assets/rowesys_report.pdf">Rowesys — Rosie, an autonomous weeding robot</a>
     <div class="meta">ETH Zurich, Focus Project (team of 11) · 2020</div>
     <p>
-      Year-long Bachelor capstone: designing and building a field robot that
-      detects and mechanically removes weeds between crop rows, eliminating the
-      need for chemical herbicides. Covers mechanical design, perception,
-      navigation, and full system integration.
+      Nine-month Bachelor capstone: the Rowesys team designed and built
+      <em>Rosie</em>, a four-wheel-drive field robot for organic sugar-beet
+      farming. Cameras drive autonomous row-following and weed detection;
+      mechanical goosefoot sweepers remove weeds between rows — no
+      herbicides. Covers mechanical design, perception, navigation, and
+      full system integration.
     </p>
   </li>
   <li>
     <a href="assets/waste_weight_estimation_report.pdf">Image-Based Weight Estimation for Waste Items</a>
     <div class="meta">ETH Zurich, Robotic Systems Lab · 2022</div>
     <p>
-      Semester thesis on predicting the mass of individual waste items directly
-      from RGB-D images, as part of an autonomous waste-handling pipeline.
-      Supervised by Fidel Esquivel Estay and Hendrik Kolvenbach.
+      Semester thesis comparing class-average, 2D/3D regression, and neural
+      network approaches for estimating the mass of individual waste items
+      from images — a building block for large-scale waste analysis and
+      riverine-cleanup pipelines. Includes a new dataset of 325 unique items
+      across seven waste categories (1113 annotations). 2D regression won,
+      predicting 96.4% of items within a 0.5×–2× tolerance band of ground
+      truth. Supervised by Fidel Esquivel Estay and Hendrik Kolvenbach.
     </p>
   </li>
 </ul>
